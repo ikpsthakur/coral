@@ -1,6 +1,8 @@
 # Pi5 & Google Coral USB
 
-(/ignored_folder/images/Edge-TPU-USB-Accelerator-and-Pi.jpg)
+<p align="center">
+  <img width="800" src="https://images.ctfassets.net/2lpsze4g694w/5XK2dV0w55U0TefijPli1H/bf0d119d77faef9a5d2cc0dad2aa4b42/Edge-TPU-USB-Accelerator-and-Pi.jpg?w=800" alt="Raspberry Pi single board computer with USB Edge TPU accelerator">
+</p>
 
 ## Google Coral USB on Raspberry pi 5 using Docker
 
