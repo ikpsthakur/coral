@@ -1,4 +1,6 @@
-# Pi5 -- Google Coral USB
+# Pi5 & Google Coral USB
+
+(/ignored_folder/images/Edge-TPU-USB-Accelerator-and-Pi.jpg)
 
 ## Google Coral USB on Raspberry pi 5 using Docker
 
