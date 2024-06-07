@@ -8,10 +8,13 @@
 
 > It's important to use Debian 10, as that version still has a system Python version old enough to work with the Coral Python libraries.
 
-Build the Docker image, and tag it `coral`: *{you can also use the script `./build.sh`}*
+Build the Docker image, and tag it `coral`:
 ```
   sudo docker build -t "coral" .
 ```
+>[!TIP]
+> you can also use the script `./build.sh`
+
 Run the Docker image and test the TPU
 
 Make sure the device `/dev/bus/usb` is appearing on your system, then use the following `docker run` command to pass that device into the container:
