@@ -18,30 +18,30 @@ Build the Docker image, and tag it `coral`:
 Run the Docker image and test the TPU
 
 Make sure the device `/dev/bus/usb` is appearing on your system, then use the following `docker run` command to pass that device into the container:
-```
+```docker
   docker container run -dit --privileged -v /dev/bus/usb:/dev/bus/usb --name mycoral coral /bin/bash
 ```
 
 You can then connect into the container using:
-```
+```docker
   docker container exec -it mycoral /bin/bash
 ```
 You can start and stop the container `mycoral` using:
-```
+```docker
   docker container stop mycoral
 ``` 
 
-```
+```docker
   docker container start mycoral
 ```
 
 You can check the container status using standard commands as:
-```
+```docker
   docker container ls -a
 ```
 
 Once inside the container, you can run the Edge TPU example:
-```
+```python
 python3 /usr/share/edgetpu/examples/classify_image.py \
 --model /usr/share/edgetpu/examples/models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
 --label /usr/share/edgetpu/examples/models/inat_bird_labels.txt \
