@@ -1,8 +1,8 @@
-# Pi5 <> Google Coral USB
+# Pi5 -- Google Coral USB
 
-Google Coral USB on Raspberry pi 5 using Docker
+## Google Coral USB on Raspberry pi 5 using Docker
 
-It's important to use Debian 10, as that version still has a system Python version old enough to work with the Coral Python libraries.
+> It's important to use Debian 10, as that version still has a system Python version old enough to work with the Coral Python libraries.
 
 Build the Docker image, and tag it coral: {you can also the script ./build.sh}
 
