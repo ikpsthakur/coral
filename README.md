@@ -6,7 +6,7 @@
 
 ## Google Coral USB on Raspberry pi 5 using Docker
 
-> It's important to use Debian 10, as that version still has a system Python version old enough to work with the Coral Python libraries.
+> We use Debian 10 as the base image for container, as Python version is compatible with the Coral Python libraries.
 
 Build the Docker image, and tag it `coral`:
 ```
@@ -22,11 +22,11 @@ Make sure the device `/dev/bus/usb` is appearing on your system, then use the fo
   docker container run -dit --privileged -v /dev/bus/usb:/dev/bus/usb --name mycoral coral /bin/bash
 ```
 
-You can then connect into the container using
+You can then connect into the container using:
 ```
   docker container exec -it mycoral /bin/bash
 ```
-You can start and stop the container `mycoral` using
+You can start and stop the container `mycoral` using:
 ```
   docker container stop mycoral
 ``` 
@@ -35,7 +35,15 @@ You can start and stop the container `mycoral` using
   docker container start mycoral
 ```
 
-You can check the container status using standard commands as
+You can check the container status using standard commands as:
 ```
   docker container ls -a
 ```
+
+Once inside the container, you can run the Edge TPU example:
+```
+python3 /usr/share/edgetpu/examples/classify_image.py \
+--model /usr/share/edgetpu/examples/models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
+--label /usr/share/edgetpu/examples/models/inat_bird_labels.txt \
+--image /usr/share/edgetpu/examples/images/bird.bmp
+'''
